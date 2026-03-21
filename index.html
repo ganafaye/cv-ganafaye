@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gana FAYE | Master Systèmes d'Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent-color: #38bdf8;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; padding: 20px; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        
+        header { text-align: center; padding: 50px 0; border-bottom: 1px solid #334155; }
+        h1 { margin: 0; font-size: 2.8em; }
+        .tagline { color: var(--accent-color); font-weight: 600; font-size: 1.2em; margin: 10px 0; }
+        .contacts { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px; font-size: 0.9em; color: var(--text-dim); }
+        .contacts i { color: var(--accent-color); margin-right: 5px; }
+
+        h2 { border-left: 4px solid var(--accent-color); padding-left: 15px; margin-top: 40px; font-size: 1.5em; text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); padding: 20px; border-radius: 12px; border: 1px solid #334155; height: 100%; }
+        
+        .skill-group { margin-bottom: 15px; }
+        .skill-title { font-weight: bold; color: var(--accent-color); display: block; margin-bottom: 8px; font-size: 0.9em; }
+        .skill-badge { display: inline-block; background: #38bdf810; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 0.8em; margin: 3px; border: 1px solid #38bdf830; }
+        
+        .project-link { color: var(--accent-color); text-decoration: none; font-weight: 500; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gana FAYE</h1>
+            <p class="tagline">Ingénieur Systèmes d'Information | Data Scientist | DevOps | Full-Stack</p>
+            <div class="contacts">
+                <span><i class="fas fa-envelope"></i> ganafaye88@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +221 77 596 01 69</span>
+                <span><i class="fas fa-location-dot"></i> Dakar, Sénégal</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>🛠️ Expertises Techniques</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="skill-title"><i class="fas fa-chart-line"></i> DATA & IA</span>
+                    <div class="skill-badge">Analyse de données</div>
+                    <div class="skill-badge">Machine Learning</div>
+                    <div class="skill-badge">Python (Pandas, Scikit-Learn)</div>
+                    <div class="skill-badge">Modélisation prédictive</div>
+                </div>
+
+                <div class="card">
+                    <span class="skill-title"><i class="fas fa-cloud"></i> DEVOPS & INFRA</span>
+                    <div class="skill-badge">Docker</div>
+                    <div class="skill-badge">Kubernetes (k3d)</div>
+                    <div class="skill-badge">Jenkins / CI-CD</div>
+                    <div class="skill-badge">Linux (Ubuntu)</div>
+                    <div class="skill-badge">Bash Scripting</div>
+                </div>
+
+                <div class="card">
+                    <span class="skill-title"><i class="fas fa-code"></i> DÉVELOPPEMENT FULL-STACK</span>
+                    <div class="skill-badge">React JS & Native</div>
+                    <div class="skill-badge">FastAPI</div>
+                    <div class="skill-badge">Spring Boot / Java</div>
+                    <div class="skill-badge">Laravel / PHP</div>
+                    <div class="skill-badge">Node JS</div>
+                    <div class="skill-badge">Odoo ERP</div>
+                </div>
+
+                <div class="card">
+                    <span class="skill-title"><i class="fas fa-sitemap"></i> ARCHITECTURE & SI</span>
+                    <div class="skill-badge">Conception de SI</div>
+                    <div class="skill-badge">UML / Merise</div>
+                    <div class="skill-badge">API REST</div>
+                    <div class="skill-badge">MySQL / Oracle / PostgreSQL</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🚀 Projets Réalisés</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Medicare</h3>
+                    <p>Plateforme de suivi patientes en gynéco-obstétrique[cite: 35].</p>
+                    <a href="http://medicare.byethost5.com" class="project-link" target="_blank">Voir le projet <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="card">
+                    <h3>AsiTelecom</h3>
+                    <p>Site web réalisé avec le CMS Joomla pour une entreprise Telecom[cite: 40, 42].</p>
+                    <a href="http://asitelecom.byethost24.com" class="project-link" target="_blank">Voir le site <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎓 Parcours Académique</h2>
+            <div class="grid">
+                <div class="card">
+                    <p><strong>Master 1 Systèmes d'Information</strong><br>Université Alioune Diop | 2025 [cite: 11, 12, 13]</p>
+                </div>
+                <div class="card">
+                    <p><strong>Licence en Développement Web</strong><br>Université Alioune Diop | 2022 - 2025 [cite: 14, 15]</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
