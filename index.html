@@ -6,6 +6,22 @@
     <meta name="description" content="Portfolio de Gana FAYE - Ingénieur Systèmes d'Information & Data Scientist">
     <meta name="author" content="Gana FAYE">
     <title>Gana FAYE | Ingénieur SI & DevOps</title>
+    
+    <!-- ========== BALISES OPEN GRAPH (Partage réseaux sociaux) ========== -->
+    <meta property="og:title" content="Gana FAYE - Ingénieur Systèmes d'Information & Data Scientist & Devops">
+    <meta property="og:description" content="Architecte de solutions digitales, spécialisé en DevOps, Data Science, Développement Mobile et conception de systèmes d'information robustes. Découvrez mon portfolio et mes projets.">
+    <meta property="og:image" content="https://ganafaye.github.io/cv-en-ligne/images/profile.png">
+    <meta property="og:url" content="https://ganafaye.github.io/cv-en-ligne/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gana FAYE Portfolio">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gana FAYE - Ingénieur SI & DevOps">
+    <meta name="twitter:description" content="Découvrez mon portfolio et mes projets en DevOps, IA, Cloud et Développement.">
+    <meta name="twitter:image" content="https://ganafaye.github.io/cv-en-ligne/images/profile.jpg">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -254,7 +270,13 @@
             line-height: 1.2;
         }
 
-        /* Formation - Style minimal */
+        .section-desc {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Formation */
         .formation-grid {
             display: flex;
             flex-direction: column;
@@ -283,7 +305,7 @@
             color: #666;
         }
 
-        /* Compétences - Style mosaïque */
+        /* Compétences */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -333,7 +355,39 @@
             border-color: #0a0a0a;
         }
 
-        /* Certifications - Style carrousel horizontal */
+        /* Certifications */
+        .cert-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .category-header i {
+            font-size: 1.5rem;
+            color: #0a0a0a;
+        }
+
+        .category-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .cert-count {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #666;
+        }
+
         .certs-scroll {
             overflow-x: auto;
             display: flex;
@@ -365,15 +419,12 @@
             align-items: center;
             gap: 1rem;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .cert-item:hover {
+            transform: translateY(-5px);
             background: #0a0a0a;
-            color: white;
-        }
-
-        .cert-item:hover .cert-icon {
-            background: rgba(255,255,255,0.1);
             color: white;
         }
 
@@ -387,6 +438,11 @@
             justify-content: center;
             font-size: 1.4rem;
             transition: 0.3s;
+        }
+
+        .cert-item:hover .cert-icon {
+            background: rgba(255,255,255,0.1);
+            color: white;
         }
 
         .cert-info h4 {
@@ -403,46 +459,141 @@
             color: #aaa;
         }
 
-        .cert-download {
-            margin-left: auto;
-            font-size: 1rem;
-            opacity: 0.5;
+        .cert-badge {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            opacity: 0.6;
             transition: 0.3s;
         }
 
-        .cert-item:hover .cert-download {
+        .cert-item:hover .cert-badge {
             opacity: 1;
+            color: white;
         }
 
-        /* Projets - Style carte épurée */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+        /* Modal PDF */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
         }
 
-        .project-card {
+        .modal-pdf {
+            width: 90%;
+            height: 90%;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
             background: #f8f8f8;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .modal-header-info h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .modal-header-info p {
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .close-modal {
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            transition: 0.3s;
+        }
+
+        .close-modal:hover {
+            color: #0a0a0a;
+        }
+
+        .pdf-container {
+            flex: 1;
+            overflow: auto;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pdfViewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            padding: 1rem;
+            background: #f8f8f8;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .btn-pdf {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+
+        .btn-pdf:hover {
+            background: #0a0a0a;
+            color: white;
+            border-color: #0a0a0a;
+        }
+
+        /* Projets */
+        .project-card {
+            min-width: 320px;
+            background: white;
             border-radius: 20px;
             overflow: hidden;
             transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .project-img {
-            height: 180px;
-            background: linear-gradient(135deg, #e0e0e0 0%, #d0d0d0 100%);
+            height: 160px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
+            color: white;
         }
 
         .project-content {
-            padding: 1.5rem;
+            padding: 1.2rem;
         }
 
         .project-cat {
@@ -456,13 +607,14 @@
         .project-content h3 {
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         .project-content p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #666;
             margin-bottom: 1rem;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .project-tech {
@@ -473,17 +625,51 @@
         }
 
         .project-tech span {
-            background: white;
+            background: #f0f0f0;
             padding: 4px 10px;
             border-radius: 20px;
             font-size: 0.7rem;
+            font-weight: 500;
+            color: #333;
         }
 
         .project-link {
             color: #0a0a0a;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            gap: 0.8rem;
+            color: #666;
+        }
+
+        .homelab-btn {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .homelab-btn a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #0a0a0a;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .homelab-btn a:hover {
+            transform: translateY(-2px);
+            background: #333;
         }
 
         /* Contact */
@@ -533,6 +719,36 @@
             font-weight: 600;
             cursor: pointer;
             width: 100%;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #333;
+        }
+
+        .contact-form button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .form-status {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .form-status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
 
         footer {
@@ -561,9 +777,6 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
             .contact-grid {
                 grid-template-columns: 1fr;
                 padding: 2rem;
@@ -588,6 +801,23 @@
             }
             .menu-btn {
                 display: block;
+            }
+            .modal-pdf {
+                width: 95%;
+                height: 95%;
+            }
+            .modal-header {
+                padding: 0.75rem 1rem;
+            }
+            .modal-header-info h3 {
+                font-size: 0.85rem;
+            }
+            .btn-pdf {
+                padding: 6px 12px;
+                font-size: 0.7rem;
+            }
+            .project-card {
+                min-width: 280px;
             }
         }
     </style>
@@ -650,13 +880,15 @@
                     <div class="formation-content">
                         <h3>Master 1 Systèmes d'Information</h3>
                         <p>Université Alioune Diop, Bambey • Data Science & Cloud Computing</p>
+                        <p style="font-size:0.85rem; color:#666; margin-top:0.5rem;">📌 Architecture Cloud, Data science, Machine Learning, Administration SI</p>
                     </div>
                 </div>
                 <div class="formation-item">
-                    <div class="formation-year">2022 — 2025</div>
+                    <div class="formation-year">2021 — 2025</div>
                     <div class="formation-content">
                         <h3>Licence Développement Web & Mobile</h3>
                         <p>Université Alioune Diop, Bambey • Mention Bien • Spécialisation Flutter & React Native</p>
+                        <p style="font-size:0.85rem; color:#666; margin-top:0.5rem;"></p>
                     </div>
                 </div>
                 <div class="formation-item">
@@ -676,13 +908,14 @@
             <div class="section-header">
                 <div class="section-sub">Expertises</div>
                 <h2 class="section-title">Compétences</h2>
+                <p class="section-desc">Compétences techniques et transversales acquises au fil de mes projets et formations</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-block">
                     <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Docker <span style="font-size:0.65rem;"></span></span>
+                        <span class="skill-tag">Kubernetes <span style="font-size:0.65rem;"></span></span>
                         <span class="skill-tag">Jenkins</span>
                         <span class="skill-tag">CI/CD</span>
                         <span class="skill-tag">AWS</span>
@@ -694,12 +927,29 @@
                 <div class="skill-block">
                     <h3><i class="fas fa-server"></i> Ingénierie SI</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Architecture SI</span>
                         <span class="skill-tag">Merise/UML</span>
                         <span class="skill-tag">ERP Odoo</span>
-                        <span class="skill-tag">Urbanisation SI</span>
-                        <span class="skill-tag">Gestion de projet</span>
-                        <span class="skill-tag">TOGAF</span>
+                        <span class="skill-tag">Conception SI</span>
+                        <span class="skill-tag">Gestion de projet SI </span>
+                    </div>
+                </div>
+                <div class="skill-block">
+                    <h3><i class="fas fa-wrench"></i> Administration & Maintenance SI</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Administration Linux</span>
+                        <span class="skill-tag">Administration Windows</span>
+                        <span class="skill-tag">Maintenance Système d'Information</span>
+                        <span class="skill-tag">Administration Système et Réseaux</span>
+                        <span class="skill-tag">Gestion des incidents</span>
+                        <span class="skill-tag">Scripting (Bash/Python)</span>
+                    </div>
+                </div>
+                <div class="skill-block">
+                    <h3><i class="fas fa-network-wired"></i> Réseaux & Infrastructure</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">TCP/IP & Routage</span>
+                        <span class="skill-tag">DNS/DHCP</span>
+                        <span class="skill-tag">Cisco</span>
                     </div>
                 </div>
                 <div class="skill-block">
@@ -733,8 +983,6 @@
                         <span class="skill-tag">React Native</span>
                         <span class="skill-tag">Firebase</span>
                         <span class="skill-tag">iOS/Android</span>
-                        <span class="skill-tag">GetX</span>
-                        <span class="skill-tag">Riverpod</span>
                     </div>
                 </div>
                 <div class="skill-block">
@@ -745,30 +993,199 @@
                         <span class="skill-tag">Scikit-Learn</span>
                         <span class="skill-tag">TensorFlow/Keras</span>
                         <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">LLM & OpenAI</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications avec scroll horizontal -->
+    <!-- Certifications -->
     <section id="certs">
         <div class="section-container">
             <div class="section-header">
                 <div class="section-sub">Reconnaissances</div>
                 <h2 class="section-title">Certifications</h2>
+                <p class="section-desc">+20 certifications obtenues — Cliquez sur une carte pour visualiser le certificat</p>
             </div>
-            <div class="certs-scroll">
-                <div class="cert-item"><div class="cert-icon"><i class="fab fa-aws"></i></div><div class="cert-info"><h4>AWS Cloud Practitioner</h4><p>Amazon Web Services • 2026</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fab fa-docker"></i></div><div class="cert-info"><h4>Docker Mastery</h4><p>DevOps • 2025</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fab fa-python"></i></div><div class="cert-info"><h4>Python for Data Science</h4><p>IBM • 2024</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fas fa-mobile-alt"></i></div><div class="cert-info"><h4>Flutter Development</h4><p>Google • 2025</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fab fa-react"></i></div><div class="cert-info"><h4>React & Next.js</h4><p>Meta • 2024</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fas fa-database"></i></div><div class="cert-info"><h4>Oracle Database SQL</h4><p>Oracle • 2024</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fab fa-kubernetes"></i></div><div class="cert-info"><h4>Kubernetes Fundamentals</h4><p>Linux Foundation • 2025</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fas fa-shield-alt"></i></div><div class="cert-info"><h4>DevSecOps Essentials</h4><p>OWASP • 2025</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
-                <div class="cert-item"><div class="cert-icon"><i class="fab fa-node-js"></i></div><div class="cert-info"><h4>Node.js Advanced</h4><p>OpenJS • 2025</p></div><a href="#" class="cert-download" onclick="alert('Téléchargement PDF')"><i class="fas fa-download"></i></a></div>
+
+            <!-- Catégorie OpenClassroom -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fab fa-js"></i>
+                    <h3>OpenClassroom</h3>
+                    <span class="cert-count">3 certifications</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/certificatOpenClassroomjavascriptGanaFaye.pdf', 'Développeur Full-Stack JavaScript', 'OpenClassroom • 2025')">
+                        <div class="cert-icon"><i class="fab fa-js"></i></div>
+                        <div class="cert-info">
+                            <h4>Développeur Full-Stack JavaScript</h4>
+                            <p>OpenClassroom • 2025</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Certification OpenClassroom Développez des sites web avec Java EE.pdf', 'Développez des sites web avec Java EE', 'OpenClassroom • 2024')">
+                        <div class="cert-icon"><i class="fab fa-java"></i></div>
+                        <div class="cert-info">
+                            <h4>Développez des sites web avec Java EE</h4>
+                            <p>OpenClassroom • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Certificat Gana Faye cloud avec Amazon Web Services.pdf', 'Découvrez le cloud avec Amazon Web Services', 'OpenClassroom • 2026')">
+                        <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                        <div class="cert-info">
+                            <h4>Cloud avec Amazon Web Services</h4>
+                            <p>OpenClassroom • 2025</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie Coursera -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fab fa-coursera"></i>
+                    <h3>Coursera</h3>
+                    <span class="cert-count">7 certifications</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera certif figma.pdf', 'Get Started with Figma', 'Coursera • Figma • 2024')">
+                        <div class="cert-icon"><i class="fab fa-figma"></i></div>
+                        <div class="cert-info">
+                            <h4>Get Started with Figma</h4>
+                            <p>Coursera • Figma • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera certif Gana Faye python.pdf', 'Programming in Python', 'Coursera • Meta • 2024')">
+                        <div class="cert-icon"><i class="fab fa-python"></i></div>
+                        <div class="cert-info">
+                            <h4>Programming in Python</h4>
+                            <p>Coursera • Meta • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera certif UI Gana Faye.pdf', 'Créer des interfaces utilisateur dynamiques', 'Coursera • Google • 2024')">
+                        <div class="cert-icon"><i class="fab fa-google"></i></div>
+                        <div class="cert-info">
+                            <h4>Créer des interfaces utilisateur dynamiques</h4>
+                            <p>Coursera • Google • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera Certif wireframe.pdf', 'Construire des wireframes', 'Coursera • Google • 2024')">
+                        <div class="cert-icon"><i class="fab fa-google"></i></div>
+                        <div class="cert-info">
+                            <h4>Construire des wireframes</h4>
+                            <p>Coursera • Google • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera gana faye react native.pdf', 'React Native', 'Coursera • Meta • 2024')">
+                        <div class="cert-icon"><i class="fab fa-react"></i></div>
+                        <div class="cert-info">
+                            <h4>React Native</h4>
+                            <p>Coursera • Meta • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera react basique certif.pdf', 'Les Bases de React', 'Coursera • Meta • 2024')">
+                        <div class="cert-icon"><i class="fab fa-react"></i></div>
+                        <div class="cert-info">
+                            <h4>Les Bases de React</h4>
+                            <p>Coursera • Meta • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Software Design and Project Management Coursera Gana Faye.pdf', 'Software Design and Project Management', 'Coursera • HKUST • 2024')">
+                        <div class="cert-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="cert-info">
+                            <h4>Software Design and Project Management</h4>
+                            <p>Coursera • HKUST • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie Oracle -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fab fa-oracle"></i>
+                    <h3>Oracle</h3>
+                    <span class="cert-count">2 certifications</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Oracle certification Gana Faye.pdf', 'Oracle Database Design', 'Oracle University • 2024')">
+                        <div class="cert-icon"><i class="fas fa-database"></i></div>
+                        <div class="cert-info">
+                            <h4>Oracle Database Design</h4>
+                            <p>Oracle University • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/certificat oracle Java SE.pdf', 'Oracle Certified Professional: Java SE 17 Developer', 'Oracle University • 2024')">
+                        <div class="cert-icon"><i class="fab fa-java"></i></div>
+                        <div class="cert-info">
+                            <h4>Java SE 17 Developer</h4>
+                            <p>Oracle University • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie IA & Python -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>IA & Python</h3>
+                    <span class="cert-count">5 certifications</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/python certificate.pdf', 'Python Essentials 1', 'Python Institute • 2024')">
+                        <div class="cert-icon"><i class="fab fa-python"></i></div>
+                        <div class="cert-info">
+                            <h4>Python Essentials 1</h4>
+                            <p>Python Institute • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/certif python_cisco.pdf', 'Python Essentials 2', 'Cisco • 2025')">
+                        <div class="cert-icon"><i class="fab fa-python"></i></div>
+                        <div class="cert-info">
+                            <h4>Python Essentials 2</h4>
+                            <p>Cisco • 2025</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Python_for_Data_Science_and_AI_Badge.pdf', 'Python for Data Science and AI', 'IBM • 2024')">
+                        <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="cert-info">
+                            <h4>Python for Data Science and AI</h4>
+                            <p>IBM • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/LLM Engineering.pdf', 'LLM Engineering & OpenAI API', 'DeepLearning.AI • 2025')">
+                        <div class="cert-icon"><i class="fas fa-language"></i></div>
+                        <div class="cert-info">
+                            <h4>LLM Engineering & OpenAI API</h4>
+                            <p>DeepLearning.AI • 2025</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Machine Learning Scikit-Learn.pdf', 'Machine Learning avec Scikit-Learn', 'DataCamp • 2024')">
+                        <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="cert-info">
+                            <h4>Machine Learning avec Scikit-Learn</h4>
+                            <p>DataCamp • 2024</p>
+                            <span class="cert-badge">📄 Visualiser →</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -779,17 +1196,227 @@
             <div class="section-header">
                 <div class="section-sub">Réalisations</div>
                 <h2 class="section-title">Projets</h2>
+                <p class="section-desc">Découvrez mes réalisations par domaine d'expertise</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card"><div class="project-img"><i class="fas fa-mobile-alt"></i></div><div class="project-content"><div class="project-cat">Mobile (Flutter)</div><h3>Delivery App</h3><p>Application de livraison avec suivi en temps réel, notifications push et paiement intégré</p><div class="project-tech"><span>Flutter</span><span>Firebase</span><span>Node.js</span></div><a href="#" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-cloud-upload-alt"></i></div><div class="project-content"><div class="project-cat">DevOps</div><h3>CI/CD Pipeline</h3><p>Pipeline automatisé avec Jenkins, Docker et Kubernetes pour déploiement continu</p><div class="project-tech"><span>Jenkins</span><span>Docker</span><span>K8s</span></div><a href="#" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-hospital"></i></div><div class="project-content"><div class="project-cat">Full-Stack</div><h3>Medicare</h3><p>Plateforme de suivi des patientes en cliniques gynéco-obstétrique</p><div class="project-tech"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span></div><a href="http://medicare.byethost5.com" target="_blank" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-building"></i></div><div class="project-content"><div class="project-cat">CMS</div><h3>AsiTelecom</h3><p>Site institutionnel pour entreprise de télécommunications</p><div class="project-tech"><span>Joomla</span><span>PHP</span><span>MySQL</span></div><a href="http://asitelecom.byethost24.com" target="_blank" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-chart-line"></i></div><div class="project-content"><div class="project-cat">IA/Data</div><h3>SenEventPro</h3><p>Prédiction immobilière avec 92% de précision et déploiement Docker</p><div class="project-tech"><span>Python</span><span>ML</span><span>FastAPI</span><span>Docker</span></div><a href="#" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-shopping-cart"></i></div><div class="project-content"><div class="project-cat">E-Commerce</div><h3>ShopEase</h3><p>Plateforme e-commerce complète avec panier, paiement et dashboard admin</p><div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div><a href="#" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-chart-bar"></i></div><div class="project-content"><div class="project-cat">Analytics</div><h3>Customer Segmentation</h3><p>Segmentation clients par clustering K-Means pour optimisation marketing</p><div class="project-tech"><span>Python</span><span>Pandas</span><span>Tableau</span></div><a href="#" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-sitemap"></i></div><div class="project-content"><div class="project-cat">Architecture SI</div><h3>Urbanisation SI</h3><p>Conception d'architecture d'entreprise pour structure bancaire</p><div class="project-tech"><span>UML</span><span>Archimate</span><span>TOGAF</span></div><a href="#" class="project-link">Voir projet →</a></div></div>
-                <div class="project-card"><div class="project-img"><i class="fas fa-robot"></i></div><div class="project-content"><div class="project-cat">Deep Learning</div><h3>Medical Diagnosis AI</h3><p>Système d'aide au diagnostic médical avec TensorFlow</p><div class="project-tech"><span>TensorFlow</span><span>Flask</span><span>Python</span></div><a href="#" class="project-link">Voir projet →</a></div></div>
+
+            <!-- Catégorie Dev Fullstack -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Dev Fullstack</h3>
+                    <span class="cert-count">3 projets</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-hospital"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Full-Stack • Laravel</div>
+                            <h3>Medicare</h3>
+                            <p>Plateforme de suivi des patientes en cliniques gynéco-obstétrique — <strong>+300 patientes suivies</strong></p>
+                            <div class="project-tech"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>PHP</span></div>
+                            <a href="http://medicare.byethost5.com" target="_blank" class="project-link">Voir projet →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-building"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">CMS • Joomla</div>
+                            <h3>AsiTelecom</h3>
+                            <p>Site institutionnel pour entreprise de télécommunications — <strong>SEO optimisé</strong></p>
+                            <div class="project-tech"><span>Joomla</span><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+                            <a href="http://asitelecom.byethost24.com" target="_blank" class="project-link">Voir projet →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">E-Commerce • MERN</div>
+                            <h3>ShopEase</h3>
+                            <p>Plateforme e-commerce complète avec panier, paiement et dashboard admin — <strong>API RESTful</strong></p>
+                            <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Express</span><span>Projet En Cours .....</span></div>
+                            <a href="#" class="project-link">Voir projet →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie Dev Mobile -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Dev Mobile</h3>
+                    <span class="cert-count">2 projets</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-truck"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Flutter • Delivery</div>
+                            <h3>Delivery App</h3>
+                            <p>Application de livraison avec suivi en temps réel, notifications push et paiement intégré — <strong>+200 commandes/jour en test</strong></p>
+                            <div class="project-tech"><span>Flutter</span><span>Firebase</span><span>Node.js</span><span>Projet En Cours .....</span></div>
+                            <a href="#" class="project-link">Voir projet →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-wallet"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">FinTech</div>
+                            <h3>Expense Tracker</h3>
+                            <p>Application de gestion des dépenses personnelles avec graphiques et export PDF</p>
+                            <div class="project-tech"><span>Flutter</span><span>Hive</span><span>BLoC</span><span>SQFlite</span><span>Projet En Cours .....</span></div>
+                            <a href="#" class="project-link">Voir projet →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie IA & Data Science - Centralisé dans Homelab Data -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>IA & Data Science</h3>
+                    <span class="cert-count">4 projets regroupés</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Machine Learning</div>
+                            <h3>Dakar Immo AI</h3>
+                            <p>Prédiction immobilière avec <strong>80% de précision</strong></p>
+                            <div class="project-tech"><span>Python</span><span>Scikit-Learn</span><span>FastAPI</span></div>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-heartbeat"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Machine Learning</div>
+                            <h3>Diabetes Predictor</h3>
+                            <p>Prédiction du diabète avec analyse des facteurs de risque</p>
+                            <div class="project-tech"><span>Python</span><span>Pandas</span><span>Scikit-Learn</span></div>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Data Quality</div>
+                            <h3>Data Quality Analyzer</h3>
+                            <p>Outil d'analyse et de nettoyage de données avec visualisations interactives</p>
+                            <div class="project-tech"><span>Python</span><span>Pandas</span><span>Streamlit</span></div>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-chart-simple"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Data Visualization</div>
+                            <h3>Medical Dashboard</h3>
+                            <p>Tableau de bord de pilotage médical avec indicateurs de santé en temps réel</p>
+                            <div class="project-tech"><span>Python</span><span>Plotly</span><span>Dash</span><span>Pandas</span></div>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="homelab-btn">
+                    <a href="https://gana-data-homelab.streamlit.app/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Accéder au Data Homelab complet
+                    </a>
+                </div>
+            </div>
+
+            <!-- Catégorie Cloud Computing & Virtualisation - Centralisé dans Homelab Infra -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Computing & Virtualisation</h3>
+                    <span class="cert-count">3 projets regroupés</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="project-card">
+                        <div class="project-img"><i class="fab fa-aws"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">AWS • Infrastructure as Code</div>
+                            <h3>Infrastructure as Code</h3>
+                            <p>Déploiement automatisé d'infrastructure AWS avec Terraform et Ansible</p>
+                            <div class="project-tech"><span>Terraform</span><span>AWS</span><span>Ansible</span><span>EC2/S3</span><span>Projet En Cours .....</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fab fa-redhat"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Virtualisation</div>
+                            <h3>Virtualisation sur OpenShift</h3>
+                            <p>Mise en place des VMs et Pods dans l'environnement OpenShift</p>
+                            <div class="project-tech"><span>OpenShift</span><span>VM</span><span></span><span>Kubernetes</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-database"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Base de données cloud</div>
+                            <h3>Migration Cloud DB</h3>
+                            <p>Migration de base de données on-premise vers AWS RDS avec réplication</p>
+                            <div class="project-tech"><span>AWS RDS</span><span>MySQL</span><span>DMS</span><span><span>Projet En Cours .....</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="homelab-btn">
+                    <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Accéder à l'Infrastructure Homelab
+                    </a>
+                </div>
+            </div>
+
+            <!-- Catégorie DevOps & Automatisation - Centralisé dans Homelab Infra -->
+            <div class="cert-category">
+                <div class="category-header">
+                    <i class="fas fa-infinity"></i>
+                    <h3>DevOps & Automatisation</h3>
+                    <span class="cert-count">3 projets regroupés</span>
+                </div>
+                <div class="certs-scroll">
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">CI/CD Pipeline</div>
+                            <h3>Pipeline CI/CD Automatisé</h3>
+                            <p>Pipeline complet avec Jenkins, Docker et Kubernetes — <strong>Déploiement en 5min</strong></p>
+                            <div class="project-tech"><span>Jenkins</span><span>Docker</span><span>Kubernetes</span><span>GitHub</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Monitoring</div>
+                            <h3>Monitoring avec Prometheus</h3>
+                            <p>Mise en place d'une stack de monitoring avec Prometheus et Grafana</p>
+                            <div class="project-tech"><span>Prometheus</span><span>Grafana</span><span>Node Exporter</span><span>Projet En Cours .....</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"><i class="fas fa-sitemap"></i></div>
+                        <div class="project-content">
+                            <div class="project-cat">Orchestration</div>
+                            <h3>Microservices avec K8s</h3>
+                            <p>Déploiement d'application microservices sur Kubernetes avec Istio</p>
+                            <div class="project-tech"><span>Kubernetes</span><span>Istio</span><span>Helm</span><span>ArgoCD</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="homelab-btn">
+                    <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Accéder à l'Infrastructure Homelab
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -805,14 +1432,16 @@
                     <div class="contact-detail"><i class="fas fa-envelope"></i> <span>ganafaye88@gmail.com</span></div>
                     <div class="contact-detail"><i class="fas fa-briefcase"></i> <span>Télétravail / Présentiel</span></div>
                     <div class="contact-detail"><i class="fas fa-clock"></i> <span>Disponible immédiatement</span></div>
+                    <div class="contact-detail"><i class="fab fa-whatsapp"></i> <span>+221 77 596 01 69</span></div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Nom complet" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="text" placeholder="Sujet">
-                        <textarea rows="4" placeholder="Votre message" required></textarea>
+                    <form id="contactForm" action="https://formspree.io/f/mojpllqq" method="POST">
+                        <input type="text" name="name" placeholder="Nom complet" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="_subject" placeholder="Sujet">
+                        <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
                         <button type="submit">Envoyer le message</button>
+                        <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -821,39 +1450,193 @@
 
     <footer>
         <p>© 2026 Gana FAYE — Ingénieur Systèmes d'Information & Data Scientist</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Développeur Full-Stack | Flutter | DevOps | IA/Data</p>
-        <p style="margin-top: 0.5rem; font-size: 0.75rem;">Conçu avec soin à Dakar, Sénégal</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Développeur Full-Stack | Flutter | DevOps | IA/Data | Administration SI</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem;">Rufisque, Dakar, Sénégal</p>
     </footer>
+
+    <!-- Modal PDF -->
+    <div id="pdfModal" class="modal" onclick="closePDFModal()">
+        <div class="modal-content modal-pdf" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <h3 id="pdfTitle">Certificat</h3>
+                    <p id="pdfIssuer"></p>
+                </div>
+                <span class="close-modal" onclick="closePDFModal()">&times;</span>
+            </div>
+            <div class="pdf-container">
+                <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-pdf" onclick="zoomIn()">
+                    <i class="fas fa-search-plus"></i> Zoom +
+                </button>
+                <button class="btn-pdf" onclick="zoomOut()">
+                    <i class="fas fa-search-minus"></i> Zoom -
+                </button>
+                <button class="btn-pdf" onclick="resetZoom()">
+                    <i class="fas fa-sync-alt"></i> Réinitialiser
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Cursor
         const cursor = document.querySelector('.cursor');
         const cursorFollower = document.querySelector('.cursor-follower');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
-            cursorFollower.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
-        });
+        if (cursor && cursorFollower) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+                cursorFollower.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
+            });
+        }
 
         // Menu mobile
         const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.getElementById('navLinks');
-        menuBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+        }
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) target.scrollIntoView({ behavior: 'smooth' });
-                navLinks.classList.remove('active');
+                const href = this.getAttribute('href');
+                if (href === '#' || href === '') {
+                    e.preventDefault();
+                    return;
+                }
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    if (navLinks) navLinks.classList.remove('active');
+                }
             });
         });
 
-        // Form
-        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
-            e.target.reset();
+        // Formulaire de contact avec Formspree
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+                submitBtn.disabled = true;
+                
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: new FormData(contactForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        formStatus.innerHTML = '✓ Message envoyé avec succès ! Je vous répondrai rapidement.';
+                        formStatus.className = 'form-status success';
+                        contactForm.reset();
+                    } else {
+                        const data = await response.json();
+                        if (data.errors) {
+                            formStatus.innerHTML = '✗ Erreur: ' + data.errors.map(error => error.message).join(', ');
+                        } else {
+                            throw new Error('Erreur lors de l\'envoi');
+                        }
+                        formStatus.className = 'form-status error';
+                    }
+                } catch (error) {
+                    formStatus.innerHTML = '✗ Erreur lors de l\'envoi. Veuillez réessayer ou m\'envoyer un email directement.';
+                    formStatus.className = 'form-status error';
+                } finally {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    setTimeout(() => {
+                        formStatus.innerHTML = '';
+                        formStatus.className = 'form-status';
+                    }, 5000);
+                }
+            });
+        }
+
+        // Variables pour le zoom PDF
+        let currentZoom = 1;
+        const zoomStep = 0.2;
+        const maxZoom = 3;
+        const minZoom = 0.5;
+
+        function openPDF(pdfPath, title, issuer) {
+            const modal = document.getElementById('pdfModal');
+            const pdfViewer = document.getElementById('pdfViewer');
+            const pdfTitle = document.getElementById('pdfTitle');
+            const pdfIssuer = document.getElementById('pdfIssuer');
+            
+            fetch(pdfPath)
+                .then(response => {
+                    if (response.ok) {
+                        pdfViewer.src = pdfPath;
+                        pdfTitle.textContent = title;
+                        pdfIssuer.textContent = issuer;
+                        resetZoom();
+                        modal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        alert(`Le fichier ${pdfPath} n'a pas été trouvé. Vérifiez que le fichier existe bien.`);
+                    }
+                })
+                .catch(error => {
+                    alert(`Erreur: Impossible de charger le fichier ${pdfPath}.`);
+                });
+        }
+
+        function closePDFModal() {
+            const modal = document.getElementById('pdfModal');
+            const pdfViewer = document.getElementById('pdfViewer');
+            
+            modal.style.display = 'none';
+            pdfViewer.src = '';
+            document.body.style.overflow = '';
+            resetZoom();
+        }
+
+        function zoomIn() {
+            if (currentZoom < maxZoom) {
+                currentZoom += zoomStep;
+                applyZoom();
+            }
+        }
+
+        function zoomOut() {
+            if (currentZoom > minZoom) {
+                currentZoom -= zoomStep;
+                applyZoom();
+            }
+        }
+
+        function resetZoom() {
+            currentZoom = 1;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            const pdfViewer = document.getElementById('pdfViewer');
+            pdfViewer.style.transform = `scale(${currentZoom})`;
+            pdfViewer.style.transformOrigin = 'top left';
+            pdfViewer.style.width = `${100 / currentZoom}%`;
+            pdfViewer.style.height = `${100 / currentZoom}%`;
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDFModal();
+            }
         });
     </script>
 </body>

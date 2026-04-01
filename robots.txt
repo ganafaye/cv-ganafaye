@@ -1,0 +1,9 @@
+# Allow all bots to crawl
+User-agent: *
+Allow: /
+
+# Disallow access to certificates folder (optional - prevents indexing of PDF files)
+Disallow: /Mes_Certificats/
+
+# Sitemap location
+Sitemap: https://ganafaye.github.io/cv-en-ligne/sitemap.xml
