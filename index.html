@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Gana FAYE - Ingénieur Systèmes d'Information & Data Scientist">
     <meta name="author" content="Gana FAYE">
     <title>Gana FAYE | Ingénieur SI & DevOps</title>
-    
+
     <!-- ========== BALISES OPEN GRAPH (Partage réseaux sociaux) ========== -->
     <meta property="og:title" content="Gana FAYE - Ingénieur Systèmes d'Information & Data Scientist & Devops">
-    <meta property="og:description" content="Architecte de solutions digitales, spécialisé en DevOps, Data Science, Développement Web et Mobile et conception de systèmes d'information robustes. Découvrez mon portfolio et mes projets.">
+    <meta property="og:description"
+        content="Architecte de solutions digitales, spécialisé en DevOps, Data Science, Développement Web et Mobile et conception de systèmes d'information robustes. Découvrez mon portfolio et mes projets.">
     <meta property="og:image" content="https://ganafaye.github.io/cv-en-ligne/images/profile.png">
     <meta property="og:url" content="https://ganafaye.github.io/cv-en-ligne/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gana FAYE Portfolio">
     <meta property="og:locale" content="fr_FR">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gana FAYE - Ingénieur SI & DevOps">
-    <meta name="twitter:description" content="Découvrez mon portfolio et mes projets en DevOps, IA, Cloud et Développement.">
+    <meta name="twitter:description"
+        content="Découvrez mon portfolio et mes projets en DevOps, IA, Cloud et Développement.">
     <meta name="twitter:image" content="https://ganafaye.github.io/cv-en-ligne/images/profile.png">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Favicon avec initiales GF -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%236366f1' rx='20'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EGF%3C/text%3E%3C/svg%3E">
     <style>
         * {
             margin: 0;
@@ -129,7 +136,7 @@
             position: absolute;
             font-size: 12rem;
             font-weight: 800;
-            color: rgba(255,255,255,0.02);
+            color: rgba(255, 255, 255, 0.02);
             bottom: -50px;
             right: -50px;
             letter-spacing: -0.05em;
@@ -154,14 +161,14 @@
 
         .hero-badge {
             display: inline-block;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             padding: 6px 14px;
             border-radius: 40px;
             font-size: 0.7rem;
             color: #a0a0a0;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .hero-title {
@@ -206,11 +213,11 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
         }
 
         .btn-outline {
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
             padding: 12px 28px;
             border-radius: 40px;
@@ -221,7 +228,7 @@
         }
 
         .btn-outline:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .hero-image {
@@ -441,7 +448,7 @@
         }
 
         .cert-item:hover .cert-icon {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
         }
 
@@ -480,7 +487,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.95);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 10000;
             justify-content: center;
             align-items: center;
@@ -574,12 +581,12 @@
             border-radius: 20px;
             overflow: hidden;
             transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .project-img {
@@ -764,30 +771,38 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+
             .hero-title {
                 font-size: 2.5rem;
             }
+
             .hero-buttons {
                 justify-content: center;
             }
+
             .hero-desc {
                 margin-left: auto;
                 margin-right: auto;
             }
+
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+
             .contact-grid {
                 grid-template-columns: 1fr;
                 padding: 2rem;
             }
+
             .formation-item {
                 flex-direction: column;
                 gap: 0.5rem;
             }
+
             .nav-links {
                 display: none;
             }
+
             .nav-links.active {
                 display: flex;
                 flex-direction: column;
@@ -799,29 +814,36 @@
                 padding: 2rem;
                 text-align: center;
             }
+
             .menu-btn {
                 display: block;
             }
+
             .modal-pdf {
                 width: 95%;
                 height: 95%;
             }
+
             .modal-header {
                 padding: 0.75rem 1rem;
             }
+
             .modal-header-info h3 {
                 font-size: 0.85rem;
             }
+
             .btn-pdf {
                 padding: 6px 12px;
                 font-size: 0.7rem;
             }
+
             .project-card {
                 min-width: 280px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
@@ -849,19 +871,23 @@
                 <div>
                     <div class="hero-badge">Ingénieur Systèmes d'Information</div>
                     <h1 class="hero-title">Gana <span>FAYE</span></h1>
-                    <p class="hero-desc">Architecte de solutions digitales, spécialisé en DevOps, Data Science, Développement Mobile (Flutter) et conception de systèmes d'information robustes.</p>
+                    <p class="hero-desc">Architecte de solutions digitales, spécialisé en DevOps, Data Science,
+                        Développement Mobile (Flutter) et conception de systèmes d'information robustes.</p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn-primary">Collaborer</a>
                         <a href="#projects" class="btn-outline">Voir projets</a>
                     </div>
                     <div style="display: flex; gap: 1rem;">
-                        <a href="https://github.com/ganafaye" target="_blank" style="color: white;"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/GanaFaye" target="_blank" style="color: white;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ganafaye" target="_blank" style="color: white;"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/GanaFaye" target="_blank" style="color: white;"><i
+                                class="fab fa-linkedin-in"></i></a>
                         <a href="mailto:ganafaye88@gmail.com" style="color: white;"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://ui-avatars.com/api/?background=ffffff&color=0a0a0a&size=320&name=Gana+Faye" alt="Gana FAYE">
+                    <img src="https://ui-avatars.com/api/?background=ffffff&color=0a0a0a&size=320&name=Gana+Faye"
+                        alt="Gana FAYE">
                 </div>
             </div>
         </div>
@@ -880,7 +906,8 @@
                     <div class="formation-content">
                         <h3>Master 1 Systèmes d'Information</h3>
                         <p>Université Alioune Diop, Bambey • Data Science & Cloud Computing</p>
-                        <p style="font-size:0.85rem; color:#666; margin-top:0.5rem;">📌 Architecture Cloud, Data science, Machine Learning, Administration SI</p>
+                        <p style="font-size:0.85rem; color:#666; margin-top:0.5rem;">📌 Architecture Cloud, Data
+                            science, Machine Learning, Administration SI</p>
                     </div>
                 </div>
                 <div class="formation-item">
@@ -908,7 +935,8 @@
             <div class="section-header">
                 <div class="section-sub">Expertises</div>
                 <h2 class="section-title">Compétences</h2>
-                <p class="section-desc">Compétences techniques et transversales acquises au fil de mes projets et formations</p>
+                <p class="section-desc">Compétences techniques et transversales acquises au fil de mes projets et
+                    formations</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-block">
@@ -1005,7 +1033,8 @@
             <div class="section-header">
                 <div class="section-sub">Reconnaissances</div>
                 <h2 class="section-title">Certifications</h2>
-                <p class="section-desc">+20 certifications obtenues — Cliquez sur une carte pour visualiser le certificat</p>
+                <p class="section-desc">+20 certifications obtenues — Cliquez sur une carte pour visualiser le
+                    certificat</p>
             </div>
 
             <!-- Catégorie OpenClassroom -->
@@ -1016,7 +1045,8 @@
                     <span class="cert-count">3 certifications</span>
                 </div>
                 <div class="certs-scroll">
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/certificatOpenClassroomjavascriptGanaFaye.pdf', 'Développeur Full-Stack JavaScript', 'OpenClassroom • 2025')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/certificatOpenClassroomjavascriptGanaFaye.pdf', 'Développeur Full-Stack JavaScript', 'OpenClassroom • 2025')">
                         <div class="cert-icon"><i class="fab fa-js"></i></div>
                         <div class="cert-info">
                             <h4>Développeur Full-Stack JavaScript</h4>
@@ -1024,7 +1054,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Certification OpenClassroom Développez des sites web avec Java EE.pdf', 'Développez des sites web avec Java EE', 'OpenClassroom • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Certification OpenClassroom Développez des sites web avec Java EE.pdf', 'Développez des sites web avec Java EE', 'OpenClassroom • 2024')">
                         <div class="cert-icon"><i class="fab fa-java"></i></div>
                         <div class="cert-info">
                             <h4>Développez des sites web avec Java EE</h4>
@@ -1032,7 +1063,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Certificat Gana Faye cloud avec Amazon Web Services.pdf', 'Découvrez le cloud avec Amazon Web Services', 'OpenClassroom • 2026')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Certificat Gana Faye cloud avec Amazon Web Services.pdf', 'Découvrez le cloud avec Amazon Web Services', 'OpenClassroom • 2026')">
                         <div class="cert-icon"><i class="fab fa-aws"></i></div>
                         <div class="cert-info">
                             <h4>Cloud avec Amazon Web Services</h4>
@@ -1051,7 +1083,8 @@
                     <span class="cert-count">7 certifications</span>
                 </div>
                 <div class="certs-scroll">
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera certif figma.pdf', 'Get Started with Figma', 'Coursera • Figma • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Coursera certif figma.pdf', 'Get Started with Figma', 'Coursera • Figma • 2024')">
                         <div class="cert-icon"><i class="fab fa-figma"></i></div>
                         <div class="cert-info">
                             <h4>Get Started with Figma</h4>
@@ -1059,7 +1092,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera certif Gana Faye python.pdf', 'Programming in Python', 'Coursera • Meta • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Coursera certif Gana Faye python.pdf', 'Programming in Python', 'Coursera • Meta • 2024')">
                         <div class="cert-icon"><i class="fab fa-python"></i></div>
                         <div class="cert-info">
                             <h4>Programming in Python</h4>
@@ -1067,7 +1101,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera certif UI Gana Faye.pdf', 'Créer des interfaces utilisateur dynamiques', 'Coursera • Google • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Coursera certif UI Gana Faye.pdf', 'Créer des interfaces utilisateur dynamiques', 'Coursera • Google • 2024')">
                         <div class="cert-icon"><i class="fab fa-google"></i></div>
                         <div class="cert-info">
                             <h4>Créer des interfaces utilisateur dynamiques</h4>
@@ -1075,7 +1110,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera Certif wireframe.pdf', 'Construire des wireframes', 'Coursera • Google • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Coursera Certif wireframe.pdf', 'Construire des wireframes', 'Coursera • Google • 2024')">
                         <div class="cert-icon"><i class="fab fa-google"></i></div>
                         <div class="cert-info">
                             <h4>Construire des wireframes</h4>
@@ -1083,7 +1119,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera gana faye react native.pdf', 'React Native', 'Coursera • Meta • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Coursera gana faye react native.pdf', 'React Native', 'Coursera • Meta • 2024')">
                         <div class="cert-icon"><i class="fab fa-react"></i></div>
                         <div class="cert-info">
                             <h4>React Native</h4>
@@ -1091,7 +1128,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Coursera react basique certif.pdf', 'Les Bases de React', 'Coursera • Meta • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Coursera react basique certif.pdf', 'Les Bases de React', 'Coursera • Meta • 2024')">
                         <div class="cert-icon"><i class="fab fa-react"></i></div>
                         <div class="cert-info">
                             <h4>Les Bases de React</h4>
@@ -1099,7 +1137,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Software Design and Project Management Coursera Gana Faye.pdf', 'Software Design and Project Management', 'Coursera • HKUST • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Software Design and Project Management Coursera Gana Faye.pdf', 'Software Design and Project Management', 'Coursera • HKUST • 2024')">
                         <div class="cert-icon"><i class="fas fa-project-diagram"></i></div>
                         <div class="cert-info">
                             <h4>Software Design and Project Management</h4>
@@ -1118,7 +1157,8 @@
                     <span class="cert-count">2 certifications</span>
                 </div>
                 <div class="certs-scroll">
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Oracle certification Gana Faye.pdf', 'Oracle Database Design', 'Oracle University • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Oracle certification Gana Faye.pdf', 'Oracle Database Design', 'Oracle University • 2024')">
                         <div class="cert-icon"><i class="fas fa-database"></i></div>
                         <div class="cert-info">
                             <h4>Oracle Database Design</h4>
@@ -1126,7 +1166,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/certificat oracle Java SE.pdf', 'Oracle Certified Professional: Java SE 17 Developer', 'Oracle University • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/certificat oracle Java SE.pdf', 'Oracle Certified Professional: Java SE 17 Developer', 'Oracle University • 2024')">
                         <div class="cert-icon"><i class="fab fa-java"></i></div>
                         <div class="cert-info">
                             <h4>Java SE 17 Developer</h4>
@@ -1145,7 +1186,8 @@
                     <span class="cert-count">5 certifications</span>
                 </div>
                 <div class="certs-scroll">
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/python certificate.pdf', 'Python Essentials 1', 'Python Institute • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/python certificate.pdf', 'Python Essentials 1', 'Python Institute • 2024')">
                         <div class="cert-icon"><i class="fab fa-python"></i></div>
                         <div class="cert-info">
                             <h4>Python Essentials 1</h4>
@@ -1153,7 +1195,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/certif python_cisco.pdf', 'Python Essentials 2', 'Cisco • 2025')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/certif python_cisco.pdf', 'Python Essentials 2', 'Cisco • 2025')">
                         <div class="cert-icon"><i class="fab fa-python"></i></div>
                         <div class="cert-info">
                             <h4>Python Essentials 2</h4>
@@ -1161,7 +1204,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Python_for_Data_Science_and_AI_Badge.pdf', 'Python for Data Science and AI', 'IBM • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Python_for_Data_Science_and_AI_Badge.pdf', 'Python for Data Science and AI', 'IBM • 2024')">
                         <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
                         <div class="cert-info">
                             <h4>Python for Data Science and AI</h4>
@@ -1169,7 +1213,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/LLM Engineering.pdf', 'LLM Engineering & OpenAI API', 'DeepLearning.AI • 2025')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/LLM Engineering.pdf', 'LLM Engineering & OpenAI API', 'DeepLearning.AI • 2025')">
                         <div class="cert-icon"><i class="fas fa-language"></i></div>
                         <div class="cert-info">
                             <h4>LLM Engineering & OpenAI API</h4>
@@ -1177,7 +1222,8 @@
                             <span class="cert-badge">📄 Visualiser →</span>
                         </div>
                     </div>
-                    <div class="cert-item" onclick="openPDF('Mes_Certificats/Machine Learning Scikit-Learn.pdf', 'Machine Learning avec Scikit-Learn', 'DataCamp • 2024')">
+                    <div class="cert-item"
+                        onclick="openPDF('Mes_Certificats/Machine Learning Scikit-Learn.pdf', 'Machine Learning avec Scikit-Learn', 'DataCamp • 2024')">
                         <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
                         <div class="cert-info">
                             <h4>Machine Learning avec Scikit-Learn</h4>
@@ -1212,9 +1258,12 @@
                         <div class="project-content">
                             <div class="project-cat">Full-Stack • Laravel</div>
                             <h3>Medicare</h3>
-                            <p>Plateforme de suivi des patientes en cliniques gynéco-obstétrique — <strong>+300 patientes suivies</strong></p>
-                            <div class="project-tech"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>PHP</span></div>
-                            <a href="http://medicare.byethost5.com" target="_blank" class="project-link">Voir projet →</a>
+                            <p>Plateforme de suivi des patientes en cliniques gynéco-obstétrique — <strong>+300
+                                    patientes suivies</strong></p>
+                            <div class="project-tech">
+                                <span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>PHP</span></div>
+                            <a href="http://medicare.byethost5.com" target="_blank" class="project-link">Voir projet
+                                →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1222,9 +1271,12 @@
                         <div class="project-content">
                             <div class="project-cat">CMS • Joomla</div>
                             <h3>AsiTelecom</h3>
-                            <p>Site institutionnel pour entreprise de télécommunications — <strong>SEO optimisé</strong></p>
-                            <div class="project-tech"><span>Joomla</span><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
-                            <a href="http://asitelecom.byethost24.com" target="_blank" class="project-link">Voir projet →</a>
+                            <p>Site institutionnel pour entreprise de télécommunications — <strong>SEO optimisé</strong>
+                            </p>
+                            <div class="project-tech">
+                                <span>Joomla</span><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+                            <a href="http://asitelecom.byethost24.com" target="_blank" class="project-link">Voir projet
+                                →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1232,8 +1284,11 @@
                         <div class="project-content">
                             <div class="project-cat">E-Commerce • MERN</div>
                             <h3>ShopEase</h3>
-                            <p>Plateforme e-commerce complète avec panier, paiement et dashboard admin — <strong>API RESTful</strong></p>
-                            <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Express</span><span>Projet En Cours .....</span></div>
+                            <p>Plateforme e-commerce complète avec panier, paiement et dashboard admin — <strong>API
+                                    RESTful</strong></p>
+                            <div class="project-tech">
+                                <span>React</span><span>Node.js</span><span>MongoDB</span><span>Express</span><span>Projet
+                                    En Cours .....</span></div>
                             <a href="#" class="project-link">Voir projet →</a>
                         </div>
                     </div>
@@ -1253,8 +1308,11 @@
                         <div class="project-content">
                             <div class="project-cat">Flutter • Delivery</div>
                             <h3>Delivery App</h3>
-                            <p>Application de livraison avec suivi en temps réel, notifications push et paiement intégré — <strong>+200 commandes/jour en test</strong></p>
-                            <div class="project-tech"><span>Flutter</span><span>Firebase</span><span>Node.js</span><span>Projet En Cours .....</span></div>
+                            <p>Application de livraison avec suivi en temps réel, notifications push et paiement intégré
+                                — <strong>+200 commandes/jour en test</strong></p>
+                            <div class="project-tech">
+                                <span>Flutter</span><span>Firebase</span><span>Node.js</span><span>Projet En Cours
+                                    .....</span></div>
                             <a href="#" class="project-link">Voir projet →</a>
                         </div>
                     </div>
@@ -1264,7 +1322,9 @@
                             <div class="project-cat">FinTech</div>
                             <h3>Expense Tracker</h3>
                             <p>Application de gestion des dépenses personnelles avec graphiques et export PDF</p>
-                            <div class="project-tech"><span>Flutter</span><span>Hive</span><span>BLoC</span><span>SQFlite</span><span>Projet En Cours .....</span></div>
+                            <div class="project-tech">
+                                <span>Flutter</span><span>Hive</span><span>BLoC</span><span>SQFlite</span><span>Projet
+                                    En Cours .....</span></div>
                             <a href="#" class="project-link">Voir projet →</a>
                         </div>
                     </div>
@@ -1285,8 +1345,10 @@
                             <div class="project-cat">Machine Learning</div>
                             <h3>Dakar Immo AI</h3>
                             <p>Prédiction immobilière avec <strong>80% de précision</strong></p>
-                            <div class="project-tech"><span>Python</span><span>Scikit-Learn</span><span>FastAPI</span></div>
-                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech"><span>Python</span><span>Scikit-Learn</span><span>FastAPI</span>
+                            </div>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir
+                                dans le Homelab →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1295,8 +1357,10 @@
                             <div class="project-cat">Machine Learning</div>
                             <h3>Diabetes Predictor</h3>
                             <p>Prédiction du diabète avec analyse des facteurs de risque</p>
-                            <div class="project-tech"><span>Python</span><span>Pandas</span><span>Scikit-Learn</span></div>
-                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech"><span>Python</span><span>Pandas</span><span>Scikit-Learn</span>
+                            </div>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir
+                                dans le Homelab →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1306,7 +1370,8 @@
                             <h3>Data Quality Analyzer</h3>
                             <p>Outil d'analyse et de nettoyage de données avec visualisations interactives</p>
                             <div class="project-tech"><span>Python</span><span>Pandas</span><span>Streamlit</span></div>
-                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir
+                                dans le Homelab →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1315,8 +1380,10 @@
                             <div class="project-cat">Data Visualization</div>
                             <h3>Medical Dashboard</h3>
                             <p>Tableau de bord de pilotage médical avec indicateurs de santé en temps réel</p>
-                            <div class="project-tech"><span>Python</span><span>Plotly</span><span>Dash</span><span>Pandas</span></div>
-                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech">
+                                <span>Python</span><span>Plotly</span><span>Dash</span><span>Pandas</span></div>
+                            <a href="https://gana-data-homelab.streamlit.app/" target="_blank" class="project-link">Voir
+                                dans le Homelab →</a>
                         </div>
                     </div>
                 </div>
@@ -1341,8 +1408,11 @@
                             <div class="project-cat">AWS • Infrastructure as Code</div>
                             <h3>Infrastructure as Code</h3>
                             <p>Déploiement automatisé d'infrastructure AWS avec Terraform et Ansible</p>
-                            <div class="project-tech"><span>Terraform</span><span>AWS</span><span>Ansible</span><span>EC2/S3</span><span>Projet En Cours .....</span></div>
-                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech">
+                                <span>Terraform</span><span>AWS</span><span>Ansible</span><span>EC2/S3</span><span>Projet
+                                    En Cours .....</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank"
+                                class="project-link">Voir dans le Homelab →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1351,8 +1421,10 @@
                             <div class="project-cat">Virtualisation</div>
                             <h3>Virtualisation sur OpenShift</h3>
                             <p>Mise en place des VMs et Pods dans l'environnement OpenShift</p>
-                            <div class="project-tech"><span>OpenShift</span><span>VM</span><span></span><span>Kubernetes</span></div>
-                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech">
+                                <span>OpenShift</span><span>VM</span><span></span><span>Kubernetes</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank"
+                                class="project-link">Voir dans le Homelab →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1361,8 +1433,11 @@
                             <div class="project-cat">Base de données cloud</div>
                             <h3>Migration Cloud DB</h3>
                             <p>Migration de base de données on-premise vers AWS RDS avec réplication</p>
-                            <div class="project-tech"><span>AWS RDS</span><span>MySQL</span><span>DMS</span><span><span>Projet En Cours .....</span></div>
-                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech"><span>AWS
+                                    RDS</span><span>MySQL</span><span>DMS</span><span><span>Projet En Cours .....</span>
+                            </div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank"
+                                class="project-link">Voir dans le Homelab →</a>
                         </div>
                     </div>
                 </div>
@@ -1386,9 +1461,12 @@
                         <div class="project-content">
                             <div class="project-cat">CI/CD Pipeline</div>
                             <h3>Pipeline CI/CD Automatisé</h3>
-                            <p>Pipeline complet avec Jenkins, Docker et Kubernetes — <strong>Déploiement en 5min</strong></p>
-                            <div class="project-tech"><span>Jenkins</span><span>Docker</span><span>Kubernetes</span><span>GitHub</span></div>
-                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <p>Pipeline complet avec Jenkins, Docker et Kubernetes — <strong>Déploiement en
+                                    5min</strong></p>
+                            <div class="project-tech">
+                                <span>Jenkins</span><span>Docker</span><span>Kubernetes</span><span>GitHub</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank"
+                                class="project-link">Voir dans le Homelab →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1397,8 +1475,10 @@
                             <div class="project-cat">Monitoring</div>
                             <h3>Monitoring avec Prometheus</h3>
                             <p>Mise en place d'une stack de monitoring avec Prometheus et Grafana</p>
-                            <div class="project-tech"><span>Prometheus</span><span>Grafana</span><span>Node Exporter</span><span>Projet En Cours .....</span></div>
-                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech"><span>Prometheus</span><span>Grafana</span><span>Node
+                                    Exporter</span><span>Projet En Cours .....</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank"
+                                class="project-link">Voir dans le Homelab →</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -1407,8 +1487,10 @@
                             <div class="project-cat">Orchestration</div>
                             <h3>Microservices avec K8s</h3>
                             <p>Déploiement d'application microservices sur Kubernetes avec Istio</p>
-                            <div class="project-tech"><span>Kubernetes</span><span>Istio</span><span>Helm</span><span>ArgoCD</span></div>
-                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank" class="project-link">Voir dans le Homelab →</a>
+                            <div class="project-tech">
+                                <span>Kubernetes</span><span>Istio</span><span>Helm</span><span>ArgoCD</span></div>
+                            <a href="https://ganahomelabinfra.byethost18.com/?i=3" target="_blank"
+                                class="project-link">Voir dans le Homelab →</a>
                         </div>
                     </div>
                 </div>
@@ -1427,10 +1509,12 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <h3>Discutons de votre projet</h3>
-                    <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> <span>Route de Rufisque, Dakar, Sénégal</span></div>
+                    <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> <span>Route de Rufisque, Dakar,
+                            Sénégal</span></div>
                     <div class="contact-detail"><i class="fas fa-phone"></i> <span>+221 77 596 01 69</span></div>
                     <div class="contact-detail"><i class="fas fa-envelope"></i> <span>ganafaye88@gmail.com</span></div>
-                    <div class="contact-detail"><i class="fas fa-briefcase"></i> <span>Télétravail / Présentiel</span></div>
+                    <div class="contact-detail"><i class="fas fa-briefcase"></i> <span>Télétravail / Présentiel</span>
+                    </div>
                     <div class="contact-detail"><i class="fas fa-clock"></i> <span>Disponible immédiatement</span></div>
                     <div class="contact-detail"><i class="fab fa-whatsapp"></i> <span>+221 77 596 01 69</span></div>
                 </div>
@@ -1450,7 +1534,8 @@
 
     <footer>
         <p>© 2026 Gana FAYE — Ingénieur Systèmes d'Information & Data Scientist</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Développeur Full-Stack | Flutter | DevOps | IA/Data | Administration SI</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Développeur Full-Stack | Flutter | DevOps | IA/Data |
+            Administration SI</p>
         <p style="margin-top: 0.5rem; font-size: 0.75rem;">Rufisque, Dakar, Sénégal</p>
     </footer>
 
@@ -1501,7 +1586,7 @@
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
                 if (href === '#' || href === '') {
                     e.preventDefault();
@@ -1521,14 +1606,14 @@
         const formStatus = document.getElementById('formStatus');
 
         if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
+            contactForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
-                
+
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
                 submitBtn.disabled = true;
-                
+
                 try {
                     const response = await fetch(contactForm.action, {
                         method: 'POST',
@@ -1537,7 +1622,7 @@
                             'Accept': 'application/json'
                         }
                     });
-                    
+
                     if (response.ok) {
                         formStatus.innerHTML = '✓ Message envoyé avec succès ! Je vous répondrai rapidement.';
                         formStatus.className = 'form-status success';
@@ -1557,7 +1642,7 @@
                 } finally {
                     submitBtn.innerHTML = originalBtnText;
                     submitBtn.disabled = false;
-                    
+
                     setTimeout(() => {
                         formStatus.innerHTML = '';
                         formStatus.className = 'form-status';
@@ -1577,7 +1662,7 @@
             const pdfViewer = document.getElementById('pdfViewer');
             const pdfTitle = document.getElementById('pdfTitle');
             const pdfIssuer = document.getElementById('pdfIssuer');
-            
+
             fetch(pdfPath)
                 .then(response => {
                     if (response.ok) {
@@ -1599,7 +1684,7 @@
         function closePDFModal() {
             const modal = document.getElementById('pdfModal');
             const pdfViewer = document.getElementById('pdfViewer');
-            
+
             modal.style.display = 'none';
             pdfViewer.src = '';
             document.body.style.overflow = '';
@@ -1633,11 +1718,12 @@
             pdfViewer.style.height = `${100 / currentZoom}%`;
         }
 
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closePDFModal();
             }
         });
     </script>
 </body>
+
 </html>
