@@ -6,4 +6,4 @@ Allow: /
 Disallow: /Mes_Certificats/
 
 # Sitemap location
-Sitemap: https://ganafaye.github.io/cv-en-ligne/sitemap.xml
+Sitemap: https://ganafaye.github.io/cv-ganafaye/sitemap.xml
